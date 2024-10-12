@@ -374,7 +374,7 @@
           </span>
         </h2>
         <div class="contact__form-container">
-          <form action="#" class="contact__form">
+          <form id="contactForm" action="https://formspree.io/f/mgveeeqz" method="POST" class="contact__form">
             <div class="contact__form-field">
               <label class="contact__form-label" for="name">Name</label>
               <input
@@ -412,6 +412,24 @@
             <button type="submit" class="btn btn--theme contact__btn">
               Submit
             </button>
+            <script>
+              // Get the form element
+              const form = document.getElementById('contactForm');
+      
+              // Listen for form submission
+              form.addEventListener('submit', function(event) {
+                // Let the form submit to Formspree
+                
+                
+                  // Reset the form after submission
+                  setTimeout(() => {
+                    form.reset();
+                    alert('Form submitted successfully!');
+                  }, 1000); // Adjust the delay if needed to match the form submission timing
+                
+              });
+            </script>
+            
           </form>
         </div>
       </div>
